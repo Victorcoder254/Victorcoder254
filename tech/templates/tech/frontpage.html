@@ -1,0 +1,16 @@
+{% extends 'tech/base.html' %}
+
+{% block container %}
+{% for post in posts %}
+<div class="post_block">
+    <div class="posts_credentials">
+        <p class="title">{{ post.title }}</p>
+        <p class="date_added"><i><small>{{ post.date_added }}</small></i></p>
+    </div>
+    <div class="posts_main">
+        <p class="intro">{{ post.intro }}</p><br>
+        <a class="read_more" href="{% url 'detail' post.slug %}">read more</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

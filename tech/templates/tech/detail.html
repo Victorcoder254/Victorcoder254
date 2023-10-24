@@ -1,0 +1,41 @@
+{% extends 'tech/base.html' %}
+
+{% block container %}
+<div class="post_detail">
+    <div class="post-detail_credentials">
+        <p class="title_detail">{{ post.title }}</p>
+        <p class="date_added"><i><small>{{ post.date_added }}</small></i></p>
+    </div>
+    <div class="body-details_container">
+        <p class="body_detail">{{ post.body }}</p>
+    </div>
+    <p class="comments">Comments</p>
+    {% for comment in post.comments.all %}
+    <article class="media">
+        <div class="comment_container">
+            <div class="comment">
+                <p class="comment_name">{{ comment.name }}</p>
+                <p class="comment_date"><i>{{ comment.date_added }}</i></p>
+                <p class="comment_body">{{ comment.text }}</p>
+            </div>
+        </div>
+    </article>
+    {% empty %}
+    <div class="notification">
+        <p>No Comments yet</p>
+    </div>
+    {% endfor %}
+    <p class="add_comments">add comment</p>
+    <form method="post" action="" class="comment_form">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <div class="field">
+            <div class="control">
+                <button class="button is-success">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

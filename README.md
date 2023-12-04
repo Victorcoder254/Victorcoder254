@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @Victorcoder254
-- 👀 I’m interested in artificial intelligence
-- 🌱 I’m currently learning javascript
-- 💞️ I’m looking to collaborate on basic projects
-- 📫 How to reach me the platform.
+- 👀 I'm proficient with python and JavaScript as well as Html and CSS.
+- 🌱 I’m conversant with Django, react and bootstrap.
+- 💞️ I’m also interested in Artificial intelligence.
+- 📫 Reach via victorcoder254@gmail.com.
 
 <!---
 Victorcoder254/Victorcoder254 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
